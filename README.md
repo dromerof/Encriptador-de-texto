@@ -2,11 +2,12 @@
 
 
 ## 📸 Captura de pantalla modo Escritorio. 
-![imagen](https://github.com/user-attachments/assets/6ebc29c7-d6f3-4d63-b932-ab81b642f1a5)
+![imagen](https://github.com/user-attachments/assets/e72e0a16-86d5-488b-ab76-36c8d42d8cc6)
 ## 📸 Captura de pantalla modo Tablet. 
-![imagen](https://github.com/user-attachments/assets/56532b86-c6fc-4cab-93ad-c771ff6faced)
+![imagen](https://github.com/user-attachments/assets/4000814d-481e-4a74-9891-1ca581193cd8)
 # 📸 Captura de pantalla modo Mobile. 
-![imagen](https://github.com/user-attachments/assets/df614833-d0a9-4775-83ab-7174217c3245)
+![imagen](https://github.com/user-attachments/assets/ff3ebcaa-1377-47c5-9e11-a6083c0c8869)
+
 
 ## 🚀 Reto
 
