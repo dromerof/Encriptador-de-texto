@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/?size=100&id=4R1YVxksRVyW&format=png&color=000000" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encriptador de Texto Alura, permite cifrar y descifrar mensajes de manera segura.">
+    <link rel="stylesheet" href="./src/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>SafeScript</title>
+</head>
+
+<body>
+    <header class="header">
+        <svg viewBox="0 0 100 50" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M67.3958 23.6529C67.3524 23.9311 67.2466 24.1959 67.0863 24.4275C66.926 24.659 66.7154 24.8512 66.4703 24.9898C65.9766 25.3086 65.5447 25.468 65.1077 25.6274C64.177 25.9488 63.1974 26.2702 62.1613 26.643C61.0687 27.0157 60.0891 27.3885 59.215 27.6585C58.1249 28.0313 57.0888 28.3526 56.1041 28.7254C55.3633 29.0425 54.6674 29.4556 54.0345 29.9544C53.4458 30.4877 52.9321 31.0983 52.5073 31.7695C52.0703 32.515 51.7952 33.4766 51.7952 34.5975C51.7952 36.842 52.3402 38.5491 53.4329 39.6161C54.523 40.7396 56.5438 41.2718 59.5389 41.2718C62.5933 41.2718 64.6655 40.6856 65.7607 39.5107C66.8482 38.3357 67.3932 36.6826 67.3932 34.5487V23.6529H67.3958ZM59.5415 0C64.8891 0 68.815 1.01553 71.3217 3.09802C73.831 5.12908 75.0856 7.74119 75.0856 10.8366V37.2148C75.0856 38.2817 74.8696 39.4567 74.4891 40.737C74.1035 42.0225 73.3425 43.1949 72.1418 44.2592C70.9977 45.3313 69.4166 46.2389 67.3984 46.933C65.3802 47.6272 62.7629 48 59.5441 48C56.3304 48 53.708 47.6272 51.6923 46.933C49.6767 46.2389 48.093 45.3313 46.9489 44.2592C45.8846 43.3001 45.0783 42.089 44.6042 40.737C44.2185 39.4592 44 38.2843 44 37.2174V33.001C44 30.7565 44.599 28.674 45.7997 26.8563C47.0003 24.9898 48.6894 23.7095 50.8722 22.9073C51.9623 22.5345 53.2169 22.1618 54.6335 21.681C56.0527 21.1976 57.3588 20.7169 58.6699 20.2927C59.9811 19.8633 61.1252 19.434 62.1048 19.0586C62.6959 18.8221 63.2963 18.6094 63.9044 18.421L64.8866 17.9402C65.2722 17.7268 65.6501 17.4055 66.0332 16.9787C66.4137 16.5545 66.7402 16.0737 67.0153 15.5389C67.306 14.9599 67.4557 14.3203 67.4524 13.6724V11.9627C67.4564 11.3361 67.3249 10.716 67.0667 10.145C66.8508 9.5023 66.4137 8.91612 65.8147 8.38393C65.2156 7.84917 64.3955 7.42239 63.416 7.09845C62.4338 6.78222 61.1278 6.62025 59.6521 6.62025C56.5977 6.62025 54.5795 7.21157 53.4894 8.43535C52.5639 9.50488 52.0189 10.8392 51.9109 12.3329C51.9109 12.6543 51.6383 12.8677 51.3093 12.8677L44.6582 12.9757C44.5002 12.9764 44.3483 12.9146 44.2356 12.8039C44.123 12.6931 44.0586 12.5423 44.0566 12.3844V10.8418C44.0566 9.3429 44.3317 7.95458 44.9307 6.62025C45.5323 5.28334 46.4604 4.16497 47.7125 3.20086C48.9671 2.24189 50.6048 1.44231 52.5665 0.907552C54.4767 0.26481 56.8214 0 59.5466 0H59.5415Z"
+                fill="currentColor" />
+        </svg>
+        <h1 class="title"> Encriptador de Texto</h1>
+    </header>
+
+    <main class="contenedor-principal">
+
+        <section class="contenedor-encriptador">
+
+            <textarea class="contenido-encriptar" id="contenido-encriptar"
+                placeholder="Solo se aceptan minúsculas y palabras sin acento..."></textarea>
+            <div class="contenedor-botones">
+                <button class="botones" id="encriptar"><i class="fas fa-lock"></i> Encriptar</button>
+                <button class="botones" id="desencriptar"><i class="fas fa-unlock"></i> Desencriptar</button>
+            </div>
+            <div class="alerta" id="mensaje-alerta">
+                Solo se aceptan minúsculas y palabras sin acento
+            </div>
+
+        </section>
+
+        <section class="contenedor-desencriptar">
+            
+            <textarea class="contenido-desencriptar" readonly id="contenido-desencriptar"
+                placeholder="No hay ningun texto, por favor ingresa alguno..."></textarea>
+
+            <div class="contenedor-botones">
+                <button class="botones" id="copiar"><i class="fas fa-copy"></i> Copiar</button>
+            </div>
+
+        </section>
+    </main>
+    <footer class="footer">
+        <h2 class="footer-title">Desarrolado por <strong>Daniel Romero</strong></h2>
+        <a class="footer-link" href="https://www.linkedin.com/in/dromerof/" target="_blank"><svg height="32" width="32"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor"
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
+                </path>
+            </svg></a>
+        <a class="footer-link" href="https://github.com/dromerof" target="_blank"> <svg width="32" height="32"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor"
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12">
+                </path>
+            </svg></a>
+    </footer>
+    <script src="./src/main.js"></script>
+</body>
+
+</html>

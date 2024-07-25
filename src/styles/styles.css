@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Share+Tech+Mono&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(135deg, #000000, #0F1A38);
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+.header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  color: #7FFFD4;
+  margin: 1.5rem ;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+.header svg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 6rem;
+}
+
+
+.alerta {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #7FFFD4;
+  color: #0F1A38;
+  padding: 30px;
+  font-family: sans-serif;
+  font-size: 18px;
+  border: 1px solid #B1C9EF;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 114.8rem;
+  min-height: 78.4rem;
+  margin: auto;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.contenedor-encriptador,
+.contenedor-desencriptar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 68.8rem;
+}
+
+.contenido-encriptar,
+.contenido-desencriptar {
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: 500;
+  resize: none;
+  padding: 1.2rem;
+  height: 20rem;
+  border: 0.1rem solid #7FFFD4;
+  border-radius: 0.9rem;
+  outline: none;
+  background-color: transparent;
+  color: #B1C9EF;
+  font-family: sans-serif;
+}
+
+.contenido-encriptar::placeholder,
+.contenido-desencriptar::placeholder {
+  color: #B1C9EF;
+  opacity: 0.5;
+}
+
+#contenido-desencriptar{
+  background-image: url(../img/4974356012295368362-removebg-preview.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.3s ease; 
+  pointer-events: none; 
+  z-index: -1; 
+}
+#contenido-desencriptar:focus{
+  background-image: none; 
+}
+#contenido-desencriptar:not(:placeholder-shown) {
+  background-image: none; 
+}
+
+.contenedor-botones {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.botones {
+  flex: 1;
+  max-width: 32.8rem;
+  padding: 0.8rem;
+  font-family: Orbitron;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 0.9rem;
+  border: 0.1rem solid #7FFFD4;
+  color: #7FFFD4;
+  background-color: transparent;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.botones i {
+  font-size: 1.7rem;
+  color: #7FFFD4;
+}
+
+.botones:hover i {
+  color: #0F1A38; 
+}
+
+#copiar{
+  display: none;
+}
+
+.botones:hover {
+  background-color: #7FFFD4;
+  color: #0F1A38;
+  transform: scale(1.05);
+  border-color: #B1C9EF;
+}
+
+.footer {
+  max-width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  color: #B1C9EF;
+  padding-bottom: 1rem;
+}
+
+
+.footer-title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-left: 2rem;
+}
+
+.footer-title>strong {
+  color: #7FFFD4;
+}
+
+.footer-link {
+  color: #B1C9EF;
+}
+
+.footer-link:hover {
+  color: #7FFFD4;
+  transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+  .contenedor-principal {
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .contenedor-encriptador,
+  .contenedor-desencriptar {
+    max-width: 90%;
+  }
+
+  .contenedor-botones {
+    gap: 1rem;
+    flex-direction: row;
+  }
+
+  .botones {
+    width: calc(50% - 0.5rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 1.5rem;
+  }
+
+  .alerta {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .contenedor-encriptador,
+  .contenedor-desencriptar {
+    width: 100%;
+  }
+
+  .contenedor-botones {
+    gap: 1rem;
+    flex-direction: row;
+  }
+
+  .botones {
+    width: calc(50% - 0.5rem);
+  }
+
+}
+
+@media (max-width: 480px) {
+  
+  .alerta-cuadro {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .contenedor-principal {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+
+  .contenedor-encriptador,
+  .contenedor-desencriptar {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  .contenido-encriptar,
+  .contenido-desencriptar {
+    height: 15rem;
+    font-size: 1.4rem;
+    padding: 0.8rem;
+  }
+
+  .contenedor-botones {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .botones {
+    font-size: 1.2rem;
+    padding: 0.6rem;
+    width: 100%;
+    max-width: 32.8rem;
+  }
+
+}
